@@ -62,9 +62,6 @@ import {IndexSectionComponent} from './index-section';
 
     .index-list-nav-activate{
       color: red;
-      -webkit-transform: scale(1.5);
-      -ms-transform: scale(1.5);
-      transform: scale(1.5);
     }
 
     .modal {
