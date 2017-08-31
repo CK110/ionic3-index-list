@@ -58,6 +58,6 @@ import {IndexListModule} from "ionic3-index-list";
   </ion-index-list>
 ```
 
-<img src="https://ws2.sinaimg.cn/large/006tNc79ly1fj32qo04fug30i40w24qp.gif" width = "400" height="400" align=center />
+<img src="https://ws2.sinaimg.cn/large/006tNc79ly1fj32qo04fug30i40w24qp.gif" width = "450"align=center />
 
 
