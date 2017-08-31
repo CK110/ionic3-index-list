@@ -1,6 +1,7 @@
 # ionic3-index-list
 
-![](https://ws2.sinaimg.cn/large/006tNc79ly1fj32qo04fug30i40w24qp.gif)
+<img src="https://ws2.sinaimg.cn/large/006tNc79ly1fj32qo04fug30i40w24qp.gif" width = "450" align=center />
+
 
 ## Installation
 
