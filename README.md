@@ -1,8 +1,5 @@
 # ionic3-index-list
 
-<img src="https://ws2.sinaimg.cn/large/006tNc79ly1fj32qo04fug30i40w24qp.gif" width = "200" height="200" align=center />
-
-
 ## Installation
 
 `npm i ionic3-index-list --save`
@@ -60,4 +57,7 @@ import {IndexListModule} from "ionic3-index-list";
     </ion-index-section>
   </ion-index-list>
 ```
+
+<img src="https://ws2.sinaimg.cn/large/006tNc79ly1fj32qo04fug30i40w24qp.gif" width = "400" height="400" align=center />
+
 
