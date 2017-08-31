@@ -1,15 +1,26 @@
 # ionic3-index-list
 
+![](https://ws2.sinaimg.cn/large/006tNc79ly1fj32qo04fug30i40w24qp.gif)
 
 ## Installation
 
-`npm i ngx-validate-tooltip --save`
+`npm i ionic3-index-list --save`
 
 ## Usage
 
 ### Import In AppModule
 
 ```typescript
+import {IndexListModule} from "ionic3-index-list";
+
+@NgModule({
+  declarations: [
+
+  ],
+  imports: [
+    IndexListModule
+  ]
+})
 
 ```
 
