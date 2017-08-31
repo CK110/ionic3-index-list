@@ -1,0 +1,29 @@
+{
+  "name": "ionicx-component",
+  "version": "1.0.0",
+  "description": "ionic2 component extend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CK110/angular-antd-admin.git"
+  },
+  "keywords": [
+    "ionic2",
+    "ionic3",
+    "angular4",
+    "ionic2-index-list"
+  ],
+  "author": "kaichen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CK110/angular-antd-admin/issues"
+  },
+  "homepage": "https://github.com/CK110/angular-antd-admin#readme",
+  "peerDependencies": {
+    "@angular/common": "^4.0.0",
+    "@angular/core": "^4.0.0"
+  }
+}
