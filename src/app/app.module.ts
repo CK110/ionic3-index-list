@@ -11,6 +11,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {IndexListModule} from "../components/index";
+import {DemoPage} from "../pages/demo/demo";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import {IndexListModule} from "../components/index";
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    DemoPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule,
     IndexListModule
   ],
   bootstrap: [IonicApp],
@@ -31,7 +35,8 @@ import {IndexListModule} from "../components/index";
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    DemoPage
   ],
   providers: [
     StatusBar,

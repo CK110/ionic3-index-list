@@ -1,16 +1,14 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content no-bounce>
-  <ion-index-list [hasTop]="true">
-    <div top>
-      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-    </div>
+
+
+  <ion-index-list>
     <ng-container *ngFor="let i of indexs">
       <ion-index-section [index] = "i">
         <ng-container *ngFor="let section of sections">
@@ -18,9 +16,9 @@
             section
           </ion-index-cell>
         </ng-container>
-
       </ion-index-section>
     </ng-container>
+
 
   </ion-index-list>
 

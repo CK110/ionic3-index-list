@@ -7,171 +7,40 @@
 
 <ion-content no-bounce>
 
-  <ion-index-list>
-    <ion-index-section [index]="'A'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
 
-    <ion-index-section [index]="'B'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
+  <ion-index-list [hasTop]="true" >
+    <div top>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list style="margin-bottom: 0px;">
+        <ion-item>
+          <ion-icon name="leaf" item-start></ion-icon>
+          新的朋友
+        </ion-item>
+        <ion-item>
+          <ion-icon name="leaf" item-start></ion-icon>
+          群聊
+        </ion-item>
+        <ion-item>
+          <ion-icon name="leaf" item-start></ion-icon>
+          标签
+        </ion-item>
+        <ion-item>
+          <ion-icon name="leaf" item-start></ion-icon>
+          公众号
+        </ion-item>
+      </ion-list>
+    </div>
+    <ng-container *ngFor="let i of indexs">
+      <ion-index-section [index] = "i">
+        <ng-container *ngFor="let section of sections">
+          <ion-index-cell >
+            section
+          </ion-index-cell>
+        </ng-container>
 
-    <ion-index-section [index]="'C'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
+      </ion-index-section>
+    </ng-container>
 
-    <ion-index-section [index]="'D'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
-
-    <ion-index-section [index]="'E'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
-
-    <ion-index-section [index]="'F'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
-
-    <ion-index-section [index]="'W'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
-
-    <ion-index-section [index]="'H'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
-
-    <ion-index-section [index]="'I'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
-
-    <ion-index-section [index]="'J'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
-
-    <ion-index-section [index]="'K'">
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-      <ion-index-cell>
-        222
-      </ion-index-cell>
-    </ion-index-section>
 
   </ion-index-list>
 

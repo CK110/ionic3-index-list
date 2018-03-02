@@ -6,6 +6,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content no-bounce>
+    <ion-index-list>
+      <ng-container *ngFor="let i of indexs">
+        <ion-index-section [index] = "i">
+          <ng-container *ngFor="let section of sections">
+            <ion-index-cell >
+              <ion-checkbox ></ion-checkbox>
+              <div style="margin-left: 20px">
+                section
+              </div>
+            </ion-index-cell>
+          </ng-container>
+        </ion-index-section>
+      </ng-container>
+    </ion-index-list>
 </ion-content>
