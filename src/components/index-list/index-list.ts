@@ -1,4 +1,7 @@
-import {AfterViewChecked, Component, ContentChildren, ElementRef, QueryList, ViewChild} from '@angular/core';
+import {
+  AfterViewChecked, Component, ContentChild, ContentChildren, ElementRef, Input, QueryList,
+  ViewChild
+} from '@angular/core';
 import {IndexSectionComponent} from './index-section';
 
 @Component({
@@ -16,7 +19,7 @@ import {IndexSectionComponent} from './index-section';
           {{index}}
         </div>
       </div>
-
+      
       <div class="modal" [class.show]="_showModal">
         {{_currentIndicator}}
       </div>
@@ -33,6 +36,7 @@ import {IndexSectionComponent} from './index-section';
       justify-content: space-between;
       height: 100%;
       overflow: hidden;
+      transform:translate(0,0);
     }
 
     .index-list-wrapper{
@@ -44,6 +48,7 @@ import {IndexSectionComponent} from './index-section';
     .index-list-nav{
       width:6%;
       position: absolute;
+      top: 44px;
       right: 0;
       display: flex;
       justify-content:center;
@@ -57,7 +62,7 @@ import {IndexSectionComponent} from './index-section';
 
     .index-bar{
       padding: 2px 6px;
-      font-size: 12px;
+      font-size: 8px;
     }
 
     .index-list-nav-activate{
@@ -96,16 +101,19 @@ import {IndexSectionComponent} from './index-section';
 export class IndexListComponent implements AfterViewChecked{
 
 
-  _currentIndicator= 'A';
+  _currentIndicator ;
 
   _flag= true;
   _indexes: any[]= []; //右侧导航
-  _offsetTops: Array<number> = [];
+  _offsetTops: Array<number> = []; // 每个IndexSection 的offsetTop
   _navOffsetX: 0;
   _indicatorTime: any = null;
   _showModal = false;
 
 
+  @Input() hasTop:boolean = false;
+
+  @ViewChild('top') top: ElementRef;
   @ContentChildren(IndexSectionComponent) _listOfIndexSection: QueryList<IndexSectionComponent>;
   @ViewChild('scrollContent') scrollContent: ElementRef;
 
@@ -119,18 +127,30 @@ export class IndexListComponent implements AfterViewChecked{
         this._indexes.push(section.index);
         const offsetTop = section.getElementRef().nativeElement.offsetTop;
         this._offsetTops.push(offsetTop);
+
       });
       this._flag = false;
+
+      if(this.hasTop) {
+        this._indexes.unshift('#');
+        this._offsetTops.unshift(0);
+
+      }
     }
   }
 
   onScroll(e:any) {
     e.preventDefault();
     const scrollTopOffsetTop = this.scrollContent.nativeElement.scrollTop;
+
     this._offsetTops.forEach((v, i) => {
       if (scrollTopOffsetTop >= v){
         this._currentIndicator = this._indexes[i];
+
+        //
+        this.setCurrentSection(this._currentIndicator);
       }
+
     });
   }
 
@@ -170,5 +190,14 @@ export class IndexListComponent implements AfterViewChecked{
   }
 
 
-
+  setCurrentSection(currentindex:string) {
+    const listArray = this._listOfIndexSection.toArray();
+    listArray.forEach((section)=>{
+      if(section.index === currentindex ){
+        section._current = true;
+      }else{
+        section._current = false;
+      }
+    })
+  }
 }

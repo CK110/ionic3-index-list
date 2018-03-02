@@ -4,9 +4,9 @@ import {IndexCellComponent} from './index-cell';
 @Component({
     selector: 'ion-index-section',
     template: `
-      <div class="index-section">
+      <div class="index-section" [class.index-section-current]="_current">
             <!-- group-->
-            <div class="index-section-index">
+            <div class="index-section-index" >
 
               {{index}}
 
@@ -23,18 +23,29 @@ import {IndexCellComponent} from './index-cell';
   styles: [`
     .index-section-index{
       margin: 0;
-      padding: 10px;
+      padding: 2px 10px 2px 10px;
       background-color: #fafafa;
+      border-bottom: 1px solid #dedede;
     }
 
     .index-section-main{
-      border-bottom: 1px solid #dcd8d8;
-      border-top: 1px solid #dcd8d8;
+      border-bottom: 1px solid #dedede;
+    }
+
+    .index-section-current .index-section-index{
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 3;
+        transform: translateZ(0px);
     }
   `]
 })
 export class IndexSectionComponent implements AfterViewChecked {
 
+  _current=false;
 
   @Input() index: string;
 
