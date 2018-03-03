@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
     selector: 'ion-index-cell',
     template: `
       <div class="index-cell">
-        <div class="index-cell-item" [class.index-cell-item-last]="_lastItem">
+        <div class="index-cell-item">
           <ng-content></ng-content>
         </div>
       </div>
@@ -28,15 +28,9 @@ import { Component, OnInit } from '@angular/core';
         display: flex;
         align-items: center;
       }
-
-      .index-cell-item-last{
-        border-bottom: none;
-      }
     `]
 })
 export class IndexCellComponent implements OnInit {
-
-  _lastItem = false;
 
   constructor() { }
 

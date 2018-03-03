@@ -30,7 +30,7 @@ import {IndexCellComponent} from './index-cell';
     }
 
     .index-section-main{
-      border-bottom: 1px solid #dedede;
+      /*border-bottom: 1px solid #dedede;*/
     }
 
     .index-section-current .index-section-index{
@@ -59,12 +59,12 @@ export class IndexSectionComponent implements AfterViewChecked {
   }
 
   ngAfterViewChecked(): void {
-    setTimeout(()=>{
-      if (this._listOfIndexCell && this._listOfIndexCell.length) {
-        const listArray = this._listOfIndexCell.toArray();
-        listArray[listArray.length - 1]._lastItem = true;
-      }
-    })
+    // setTimeout(()=>{
+    //   if (this._listOfIndexCell && this._listOfIndexCell.length) {
+    //     const listArray = this._listOfIndexCell.toArray();
+    //     listArray[listArray.length - 1]._lastItem = true;
+    //   }
+    // })
   }
 
 }
