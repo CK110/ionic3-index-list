@@ -266,13 +266,12 @@ var IndexSectionComponent = (function () {
         return this.elementRef;
     };
     IndexSectionComponent.prototype.ngAfterViewChecked = function () {
-        var _this = this;
-        setTimeout(function () {
-            if (_this._listOfIndexCell && _this._listOfIndexCell.length) {
-                var listArray = _this._listOfIndexCell.toArray();
-                listArray[listArray.length - 1]._lastItem = true;
-            }
-        });
+        // setTimeout(()=>{
+        //   if (this._listOfIndexCell && this._listOfIndexCell.length) {
+        //     const listArray = this._listOfIndexCell.toArray();
+        //     listArray[listArray.length - 1]._lastItem = true;
+        //   }
+        // })
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
@@ -286,7 +285,7 @@ var IndexSectionComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'ion-index-section',
             template: "\n      <div class=\"index-section\" [class.index-section-current]=\"_current\">\n            <!-- group-->\n            <div class=\"index-section-index\" >\n              {{index}}\n            </div>\n\n            <!--\u5206\u7EC4\u4E0B\u7684\u8BE6\u7EC6\u5185\u5BB9-->\n            <div class=\"index-section-main\">\n              <ng-content>\n\n              </ng-content>\n            </div>\n        </div>\n    ",
-            styles: ["\n    .index-section-index{\n      margin: 0;\n      padding: 2px 10px 2px 10px;\n      background-color: #fafafa;\n      border-bottom: 1px solid #dedede;\n    }\n\n    .index-section-main{\n      border-bottom: 1px solid #dedede;\n    }\n\n    .index-section-current .index-section-index{\n        position: sticky;\n        position: -webkit-sticky;\n        top: 0px;\n        left: 0px;\n        width: 100%;\n        z-index: 3;\n        transform: translateZ(0px);\n    }\n  "]
+            styles: ["\n    .index-section-index{\n      margin: 0;\n      padding: 2px 10px 2px 10px;\n      background-color: #fafafa;\n      border-bottom: 1px solid #dedede;\n    }\n\n    .index-section-main{\n      /*border-bottom: 1px solid #dedede;*/\n    }\n\n    .index-section-current .index-section-index{\n        position: sticky;\n        position: -webkit-sticky;\n        top: 0px;\n        left: 0px;\n        width: 100%;\n        z-index: 3;\n        transform: translateZ(0px);\n    }\n  "]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]])
     ], IndexSectionComponent);
@@ -315,14 +314,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var IndexCellComponent = (function () {
     function IndexCellComponent() {
-        this._lastItem = false;
     }
     IndexCellComponent.prototype.ngOnInit = function () { };
     IndexCellComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'ion-index-cell',
-            template: "\n      <div class=\"index-cell\">\n        <div class=\"index-cell-item\" [class.index-cell-item-last]=\"_lastItem\">\n          <ng-content></ng-content>\n        </div>\n      </div>\n    ",
-            styles: ["\n      .index-cell{\n        background-color: #fff;\n        padding-left:10px\n      }\n\n      .index-cell-item{\n        box-sizing: border-box;\n        color: inherit;\n        min-height: 48px;\n        display: block;\n        overflow: hidden;\n        position: relative;\n        text-decoration: none;\n        border-bottom: 1px solid #dcd8d8;\n        width: 100%;\n        display: flex;\n        align-items: center;\n      }\n\n      .index-cell-item-last{\n        border-bottom: none;\n      }\n    "]
+            template: "\n      <div class=\"index-cell\">\n        <div class=\"index-cell-item\">\n          <ng-content></ng-content>\n        </div>\n      </div>\n    ",
+            styles: ["\n      .index-cell{\n        background-color: #fff;\n        padding-left:10px\n      }\n\n      .index-cell-item{\n        box-sizing: border-box;\n        color: inherit;\n        min-height: 48px;\n        display: block;\n        overflow: hidden;\n        position: relative;\n        text-decoration: none;\n        border-bottom: 1px solid #dcd8d8;\n        width: 100%;\n        display: flex;\n        align-items: center;\n      }\n    "]
         }),
         __metadata("design:paramtypes", [])
     ], IndexCellComponent);
