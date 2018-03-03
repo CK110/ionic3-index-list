@@ -1,6 +1,6 @@
 {
   "name": "ionic3-index-list",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "ionic3-index-list",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/CK110/ionic3-index-list#readme",
   "peerDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/core": "^4.0.0"
+    "@angular/common": "^4.0.0 || ^5.0.0",
+    "@angular/core": "^4.0.0 || ^5.0.0"
   },
   "$schema": "../../node_modules/ng-packagr/package.schema.json",
   "ngPackage": {
