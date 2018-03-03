@@ -7,9 +7,7 @@ import {IndexCellComponent} from './index-cell';
       <div class="index-section" [class.index-section-current]="_current">
             <!-- group-->
             <div class="index-section-index" >
-
               {{index}}
-
             </div>
 
             <!--分组下的详细内容-->
@@ -58,10 +56,12 @@ export class IndexSectionComponent implements AfterViewChecked {
   }
 
   ngAfterViewChecked(): void {
+    setTimeout(_ => {
       if (this._listOfIndexCell && this._listOfIndexCell.length) {
         const listArray = this._listOfIndexCell.toArray();
-        listArray[ listArray.length - 1 ]._lastItem = true;
+        listArray[listArray.length - 1]._lastItem = true;
       }
+    })
   }
 
 }
