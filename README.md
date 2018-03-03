@@ -1,4 +1,7 @@
 # ionic3-index-list
+
+[![NPM version](https://img.shields.io/npm/v/ionic3-index-list.svg)](https://www.npmjs.com/package/ionic3-index-list)
+
 index-list 在联系人页面中很常用
 
 之前试过[ionic2-indexed-scroll](https://github.com/HsuanXyz/ionic2-indexed-scroll),比较[ionic2-alpha-scroll](https://github.com/rossmartin/ionic2-alpha-scroll),可能更angular一些，
@@ -63,7 +66,3 @@ import {IndexListModule} from "ionic3-index-list";
     </ion-index-section>
   </ion-index-list>
 ```
-
-<img src="https://ws2.sinaimg.cn/large/006tNc79ly1fj32qo04fug30i40w24qp.gif" width = "450" align=center />
-
-
