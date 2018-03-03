@@ -10,12 +10,13 @@
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
-    "ngcompile": "node_modules/.bin/ngc -p tsconfig-aot.json"
+    "ngcompile": "node_modules/.bin/ngc -p tsconfig-aot.json",
+    "build:lib": "ng-packagr -p src/components/package.json"
   },
   "dependencies": {
     "@angular/common": "4.1.3",
-    "@angular/compiler": "4.1.3",
-    "@angular/compiler-cli": "4.1.3",
+    "@angular/compiler": "^5.2.7",
+    "@angular/compiler-cli": "^5.2.7",
     "@angular/core": "4.1.3",
     "@angular/forms": "4.1.3",
     "@angular/http": "4.1.3",
@@ -34,13 +35,15 @@
     "cordova-plugin-whitelist": "^1.3.3",
     "ionic-angular": "3.6.0",
     "ionicons": "3.0.0",
+    "ng-packagr": "^2.1.0",
     "rxjs": "5.4.0",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.12"
   },
   "devDependencies": {
     "@ionic/app-scripts": "2.1.4",
-    "typescript": "2.3.4"
+    "tsickle": "^0.27.2",
+    "typescript": "2.4"
   },
   "description": "An Ionic project",
   "cordova": {
