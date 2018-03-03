@@ -191,13 +191,16 @@ export class IndexListComponent implements AfterViewChecked{
 
 
   setCurrentSection(currentindex:string) {
-    const listArray = this._listOfIndexSection.toArray();
-    listArray.forEach((section)=>{
-      if(section.index === currentindex ){
-        section._current = true;
-      }else{
-        section._current = false;
-      }
+    setTimeout(_ => {
+      const listArray = this._listOfIndexSection.toArray();
+      listArray.forEach((section)=>{
+        if(section.index === currentindex ){
+          section._current = true;
+        }else{
+          section._current = false;
+        }
+      })
     })
   }
+
 }
