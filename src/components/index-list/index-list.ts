@@ -1,5 +1,5 @@
 import {
-  AfterViewChecked, Component, ContentChild, ContentChildren, ElementRef, Input, QueryList,
+  AfterViewChecked, Component, ContentChildren, ElementRef, Input, QueryList,
   ViewChild
 } from '@angular/core';
 import {IndexSectionComponent} from './index-section';
