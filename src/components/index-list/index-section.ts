@@ -1,4 +1,7 @@
-import {AfterViewChecked, Component, ContentChildren, ElementRef, Input, QueryList} from '@angular/core';
+import {
+  AfterViewChecked, Component, ContentChildren, ElementRef, Input,
+  QueryList
+} from '@angular/core';
 import {IndexCellComponent} from './index-cell';
 
 @Component({
@@ -56,7 +59,7 @@ export class IndexSectionComponent implements AfterViewChecked {
   }
 
   ngAfterViewChecked(): void {
-    setTimeout(_ => {
+    setTimeout(()=>{
       if (this._listOfIndexCell && this._listOfIndexCell.length) {
         const listArray = this._listOfIndexCell.toArray();
         listArray[listArray.length - 1]._lastItem = true;
